@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 8px;
+}
+nav{
+    background-color: red;
+
+}
+nav ul li{
+    display: inline-block;
+}
+.container{
+    width: 100px;
+    margin: auto;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+nav ul li a:hover{
+    color: yellow;
+}
+nav ul li a{
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: green;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+}
+nav ul li a:hover::after{
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: green;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+nav ul li a:hover::before{
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
